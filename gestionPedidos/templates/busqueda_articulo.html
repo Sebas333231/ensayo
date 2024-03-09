@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siguiente Pagina</title>
+</head>
+<body>
+    <h1>Pagina de articulos</h1>
+
+    {% if articulos %}
+        <h3>La cantidad de articulos encontrados fueron: {{articulos|length}} articulos</h3>
+
+        <ul>
+            {% for articulo in articulos %}
+
+                <li>{{articulo.nombre}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No hay articulos encontrados</h3>
+
+    {% endif %}
+</body>
+</html>
